@@ -45,7 +45,7 @@ def print_banner(full=True):
         f"{CYAN}           WiFi Bruteforce Tool {RESET}",
         f"{YELLOW}================================================================================{RESET}",
         f"{GREEN}  Version: 1.0         Developed by Varun          Use responsibly! {RESET}",
-        f"{CYAN}  LinkedIn: https://www.linkedin.com/in/varun-hack/ {RESET}",
+        f"{CYAN}  LinkedIn: https://www.linkedin.com/in/pentester-varun {RESET}",
         f"{YELLOW}================================================================================{RESET}" 
     ]
 

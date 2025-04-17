@@ -66,10 +66,10 @@ def print_banner(full=True):
         format_str = "{:<15}: {}"
         # Center each line with proper padding
         print(format_str.format(f"{YELLOW}                                                         Name             ", f"Wi-Fi Adapter{RESET}"))
-        print(format_str.format(f"{YELLOW}                                                         Interface       ", f"{pywifi.PyWiFi().interfaces()[0].name()}{RESET}"))
+        print(format_str.format(f"{YELLOW}                                                         Interface        ", f"{pywifi.PyWiFi().interfaces()[0].name()}{RESET}"))
         print(format_str.format(f"{YELLOW}                                                         Target           ", f"{CYAN}{selected_ssid} ({selected_bssid}){RESET}"))
-        print(format_str.format(f"{YELLOW}                                                         Signal Strength ", f"{GREEN}{selected_signal}%{RESET}"))
-        print(format_str.format(f"{YELLOW}                                                         Wordlist        ", f"{CYAN}{wordlist_path}{RESET}"))
+        print(format_str.format(f"{YELLOW}                                                         Signal Strength  ", f"{GREEN}{selected_signal}%{RESET}"))
+        print(format_str.format(f"{YELLOW}                                                         Wordlist         ", f"{CYAN}{wordlist_path}{RESET}"))
 
         print(f"[{separator}]{RESET}")
 

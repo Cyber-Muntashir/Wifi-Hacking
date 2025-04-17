@@ -65,11 +65,11 @@ def print_banner(full=True):
         label_width = 15  # Width for all labels
         format_str = "{:<15}: {}"
         # Center each line with proper padding
-        print(format_str.format(f"{YELLOW}Name", f"Wi-Fi Adapter{RESET}").center(terminal_width))
-        print(format_str.format(f"{YELLOW}                               Interface", f"{pywifi.PyWiFi().interfaces()[0].name()}{RESET}").center(terminal_width))
-        print(format_str.format(f"{YELLOW}                        Target", f"{CYAN}{selected_ssid} ({selected_bssid}){RESET}").center(terminal_width))
-        print(format_str.format(f"{YELLOW} Signal Strength", f"{GREEN}{selected_signal}%{RESET}").center(terminal_width))
-        print(format_str.format(f"{YELLOW}   Wordlist", f"{CYAN}{wordlist_path}{RESET}").center(terminal_width))
+        print(format_str.format(f"{YELLOW}                                                         Name             ", f"Wi-Fi Adapter{RESET}"))
+        print(format_str.format(f"{YELLOW}                                                         Interface       ", f"{pywifi.PyWiFi().interfaces()[0].name()}{RESET}"))
+        print(format_str.format(f"{YELLOW}                                                         Target           ", f"{CYAN}{selected_ssid} ({selected_bssid}){RESET}"))
+        print(format_str.format(f"{YELLOW}                                                         Signal Strength ", f"{GREEN}{selected_signal}%{RESET}"))
+        print(format_str.format(f"{YELLOW}                                                         Wordlist        ", f"{CYAN}{wordlist_path}{RESET}"))
 
         print(f"[{separator}]{RESET}")
 
@@ -257,7 +257,9 @@ def menu():
                 select_network()
             elif command == "change wordlist":
                 select_wordlist()
-            elif command == "clear":
+            elif command == "clear" :
+                print_banner()
+            elif command == "cls" :
                 print_banner()
             elif command == "help":
                 show_help()
@@ -267,10 +269,12 @@ def menu():
             else:
                 print(f"{RED}[-] Invalid command. Type 'help' for available commands.{RESET}")
         except KeyboardInterrupt:
-            print(f"\n{RED}[-] Invalid input. Type 'help' for available commands.{RESET}")
+            print(f"\n{RED}Exiting...{RESET}")
+            sys.exit()
             continue
 
 if __name__ == "__main__":
     os.system("cls" if os.name == "nt" else "clear")
     print_banner()
     menu()
+    

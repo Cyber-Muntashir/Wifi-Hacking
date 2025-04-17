@@ -66,7 +66,7 @@ def print_banner(full=True):
         format_str = "{:<15}: {}"
         # Center each line with proper padding
         print(format_str.format(f"{YELLOW}Name", f"Wi-Fi Adapter{RESET}").center(terminal_width))
-        print(format_str.format(f"{YELLOW}                           Interface", f"{pywifi.PyWiFi().interfaces()[0].name()}{RESET}").center(terminal_width))
+        print(format_str.format(f"{YELLOW}                               Interface", f"{pywifi.PyWiFi().interfaces()[0].name()}{RESET}").center(terminal_width))
         print(format_str.format(f"{YELLOW}                        Target", f"{CYAN}{selected_ssid} ({selected_bssid}){RESET}").center(terminal_width))
         print(format_str.format(f"{YELLOW} Signal Strength", f"{GREEN}{selected_signal}%{RESET}").center(terminal_width))
         print(format_str.format(f"{YELLOW}   Wordlist", f"{CYAN}{wordlist_path}{RESET}").center(terminal_width))
@@ -262,7 +262,7 @@ def menu():
             elif command == "help":
                 show_help()
             elif command == "exit":
-                print(f"Exiting...{RESET}")
+                print(f"{RED}Exiting...{RESET}")
                 sys.exit()
             else:
                 print(f"{RED}[-] Invalid command. Type 'help' for available commands.{RESET}")

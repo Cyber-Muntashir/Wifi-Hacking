@@ -21,7 +21,7 @@ pip install pywifi
 
 
 ### Run the tool:
-python wifi_bruteforcer.py
+python Varun_crack.py
 
 
 ## Available commands inside the tool:
